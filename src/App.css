@@ -30,9 +30,9 @@ transform: translateY(0%);
 opacity: 1;
 }
 ul{
-    display: flex;
+display: flex;
 list-style: none;
-gap: 10px;
+gap: 40px;
 }
 li{
     cursor: pointer;
@@ -64,13 +64,21 @@ align-items: center;
 justify-content: center;
 background-image: linear-gradient(to bottom,rgb(255, 85, 0),rgb(255, 217, 159));
 font-weight: bold;
-transition: all 1s ease;
+
 opacity: 0;
 transform: translateY(100%);
+cursor: pointer;
+}
+.seehowitworks:hover{
+    width: 110px;
+    height: 110px;
+    transition: all 0.5s ease;
 }
 .there{
     opacity: 1;
-    transition: all 2s ease;
+    transition: transform 2s ease;
+    transition: width 0.5s ease,height 0.5s ease;
+
     transform: translateY(50%);
 }
 .Casestudies{
@@ -124,15 +132,140 @@ justify-content: center;
 .graycolumn{
     width: 200px;
     height: 10px;
-    background-image: linear-gradient(to top,rgb(110, 117, 131),rgba(110, 117, 131, 0.108)y) ;
+background-image: linear-gradient(to top,rgb(110, 117, 131),rgba(138, 138, 110, 0.165));
         display: flex;
-    transform: translateX(5%);
+    transform: translateX(53%);
+   align-items: center;
+    flex-direction: column;
+    font-size: 55PX;
+    overflow: visible;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+.reddishcolumn{
+    width: 200px;
+    height: 100px;
+    background-color: #ad8183;
+    border-radius: 5px;
+    transform: translateX(70%) translateY(50%);
+    opacity: 0;
+}
+.isitx{
+ height: 150px;
+ margin-top : -50px;   
+ opacity: 1;
+ transition: all 1.5s ease;
+}
+.isitxfull{
+
+}
+.textingray{
+    text-align: center;
+    margin-top: -430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    opacity: 0;
+}
+.textingray::before{
+    content: "";
+    display: block;
+    border-top: 1px solid rgb(139, 139, 139); /* Adjust properties to style your line */
+    margin-bottom: 25px;
+    width: 10%;
+}
+.isitz::before{
+    width: 100%;
+    transition: all 1.5s ease;
+}
+.isitz{
+    margin-top: 50px;
+    opacity: 1;
+    transition: all 1.5s ease;
+}
+.textingray div{
+    margin-top: -20px;
 }
 .thirddiv{
     height: 500px;
     width: 100%;
 }
+
 .grayc{
-    height: 450px;
+    height: 600px;
+    margin-bottom: -150px;
     transition: all 1.5s ease;
+}
+.persondiv{
+position: absolute;
+right: 0;
+    margin-right: -20px;
+    transform: translateY(0%);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    opacity: 0;
+}
+.isitzz{
+    transition: all 1.5s ease;
+    transform: translateY(-30%);
+opacity: 1;
+}
+.person{
+    width: 150px;
+background-color: rgb(150, 150, 150);
+    height: 180px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.person img{
+    max-width: 100%;
+    transform: scaleX(-1);
+}
+h3,h6,h5{
+    margin: 0;
+}
+.Circle{
+height: 100px;
+width: 100px;
+background-color: black;
+border-radius: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 60px;
+color: white;
+font-weight: bold;
+}
+.aiadop{
+    display: flex;
+    position: absolute;
+    left: 0;
+    margin-left: 50px;
+    margin-bottom: 60px;
+    align-items: center;
+gap: 15px;
+transform: translateY(80%);
+opacity: 0;
+}
+.isitzzz{
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: all 1.5s ease;
+}
+.aitext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+}
+.aitext h5:first-child{
+    color: gray;
+}
+.aitext h5{
+    width: 100%;
+
 }
