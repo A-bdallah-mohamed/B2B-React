@@ -3,6 +3,8 @@ import { useRef } from 'react'
 import { useInView } from 'react-intersection-observer';
 import personimg from '../assets/pngwing.com (2).png'
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useState } from 'react';
+import { FaCaretRight } from "react-icons/fa";
 
 export default function Homepage() {
   const [ref, inView] = useInView({
@@ -59,7 +61,7 @@ export default function Homepage() {
 <div className='pplndtxt'>
   <div className='firstppl'/>
   <div className='secndppl'/>
-  <div className='ppltxtt'>Case <br /> Studies <br /> <FaLongArrowAltRight />
+  <div className='ppltxtt'>Ca se <br /> Studies <br /> <FaLongArrowAltRight />
 </div>
 </div>
             </div>
@@ -71,9 +73,12 @@ export default function Homepage() {
   <div>YOUR BEST</div>
   <div>MARKETING & DATA</div>
   <div>ANALYSER</div>
+  <div style={{fontSize:'12px',color:'gray',marginTop:'13px'}}>CREATED BY</div>
+  <button className='grownow'>Grow Now <FaCaretRight />
+</button>
   </div>
 </div>
-<div className={`reddishcolumn ${isitx && 'isitx'} `} ref={x}/>
+<div className={`reddishcolumn ${isitx && 'isitx'}`} ref={x}/>
 <div className={`persondiv ${isitzz && 'isitzz'}`} ref={zz}>
   <div className='person'>
     <img src={personimg}></img>
