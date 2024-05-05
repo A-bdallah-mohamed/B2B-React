@@ -1,6 +1,9 @@
 body{
     overflow-x: hidden;
 }
+:root{
+    background-image: linear-gradient(to bottom, #ede9e3, #d4b2a7);
+}
 .cont{
 height: 500vh;
     max-width: 1360px;
@@ -15,6 +18,7 @@ height: 500vh;
     position: relative;
     max-height: 100vh;
 }
+
 .header{
     display: flex;
     flex-direction: row;
@@ -33,9 +37,24 @@ ul{
 display: flex;
 list-style: none;
 gap: 40px;
+transition: all 0.5s ease;
 }
 li{
     cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+li:hover{
+    background-color: black;
+    color: white;
+    padding: 0 15px;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    font-weight: bold;
 }
 nav{
     display: flex;
@@ -86,6 +105,13 @@ width: 150px;
 height: 100px;
 background-color: gray;
 border-radius: 10px;
+transition: all 0.5s ease;
+}
+.Casestudies:hover{
+    cursor: pointer;
+    width: 160px;
+    height: 110px;
+    transition: all 0.5s ease;
 }
 .casediv{
     transform: translateY(90%) translateX(10%);
@@ -104,6 +130,7 @@ border-radius: 10px;
     border-radius: 100%;
     border: solid 2px white;
     z-index: 2;
+    transition: all 0.5s ease;
 }
 
 .secndppl{
@@ -113,12 +140,31 @@ border-radius: 10px;
     border-radius: 100%;
 transform: translateX(-30%);
 border: solid 1px white;
+transition: all 0.5s ease;
 }
 .pplndtxt{
     display: flex;
     align-items: center;
     margin-top: 10px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
+.pplndtxt:hover .secndppl{
+transform: translateX(10%);
+transition: all 0.5s ease;
+}
+.pplndtxt:hover .firstppl{
+    transform: translateX(5%);
+    transition: all 0.5s ease;
+    }
+    .pplndtxt:hover .ppltxtt{
+        transform: translateX(15%);
+        transition: all 0.5s ease;
+    }
+    .ppltxtt{
+        transition: all 0.5s ease;
+    }
 .seconddiv{
     width: 100%;
     height: 100px;

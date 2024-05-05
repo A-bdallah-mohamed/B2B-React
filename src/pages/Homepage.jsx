@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { useRef } from 'react'
 import { useInView } from 'react-intersection-observer';
 import personimg from '../assets/pngwing.com (2).png'
+import { FaLongArrowAltRight } from "react-icons/fa";
+
 export default function Homepage() {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -57,7 +59,8 @@ export default function Homepage() {
 <div className='pplndtxt'>
   <div className='firstppl'/>
   <div className='secndppl'/>
-  <div>Case <br /> Studies</div>
+  <div className='ppltxtt'>Case <br /> Studies <br /> <FaLongArrowAltRight />
+</div>
 </div>
             </div>
             <div ref={lol} className={`seehowitworks ${viewed && 'there'}`}><div>See<br />how it<br />works</div></div>
