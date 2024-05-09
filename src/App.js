@@ -1,14 +1,16 @@
 
   import './App.css';
-  import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Secondpage from './pages/Secondpage';
   import Homepage from './pages/Homepage';
   function App() {
     return (
-      <Router>
-        <Routes>
-          <Route exact path='/' element={<Homepage />}/>
-        </Routes>
-      </Router>
+      <div className='maincontainer'>
+<div className='cont'>
+<Homepage />
+<Secondpage />
+</div>
+</div>
+
     );
   }
 
