@@ -3,11 +3,11 @@ import Personimg from '../../assets/—Pngtree—man in shirt smiles and_1314634
 import useIntersection from '../../CustomHooks/useIntersection'
 import FulluseIntersection from '../../CustomHooks/Fulluseintersection'
 export default function LeftdivPerson() {
-    const [leftdiv,isleftdivshown] = FulluseIntersection()
-    const [img,isimgshown] = FulluseIntersection()
+    const [leftdiv,isleftdivshown] = useIntersection()
+    const [img,isimgshown] = useIntersection()
   return (
    
-    <div className={`leftpersondiv ${isleftdivshown && 'leftdivshown'}`} ref={leftdiv}>
+    <div className='leftpersondiv' ref={leftdiv}>
         <img src={Personimg} ref={img} className={`imgnotshown ${isimgshown && 'imgshown'}`} />
     </div>
 
