@@ -555,6 +555,119 @@ background-image: url('https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zToo
     display: flex;
     justify-content: center;
 }
+.fourthcont{
+    height: 650px;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+}
+.halfpage{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.circle1{
+    position: absolute;
+    right: 80px;
+    top: 100px;
+    width: 90px;
+    height: 90px;
+    background-image: linear-gradient(to bottom,rgb(224, 19, 0),rgba(255, 84, 10, 0.784));
+    border-radius: 100%;
+    opacity: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.circle1shown{
+    opacity: 1;
+    transition: all 2s ease;
+}
+.circle2{
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    width: 210px;
+    height: 210px;
+border:1px solid black;
+    border-radius: 100%;
+    opacity: 0;
+    display:flex;
+   align-items: center;
+   font-weight: 500;
+    justify-content: center;
+    text-align: center;
+flex-direction: column;
+font-size: 12px;
+}
+.circle2 p{
+    font-size: 25px;
+    margin: 0;
+    font-weight: bold;
+}
+.circle4 p{
+    font-size: 25px;
+    margin: 0;
+    font-weight: bold;
+}
+.circle2shown{
+    opacity: 1;
+    transition: all 1.5s ease;
+    right : 270px;
+    top: -40px;
+}
+.circle3{
+    position: absolute;
+    right: 40px;
+    top: 60px;
+    width: 180px;
+    height: 180px;
+border:1px solid black;
+    border-radius: 100%;
+    opacity: 0;
+    display:flex;
+   align-items: center;
+   font-weight: 500;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 12px;
+    text-align: center;
+}
+.circle3 p{
+    font-size: 25px;
+    margin: 0;
+    font-weight: bold;
+}
+.circle3shown{
+    opacity: 1;
+    transition: all 1.5s ease;
+    right : 140px;
+    top: 200px;
+}
+.circle4{
+    position: absolute;
+    right: 55px;
+    top: 75px;
+    width: 140px;
+    height: 140px;
+border:1px solid black;
+    border-radius: 100%;
+    opacity: 0;
+    display:flex;
+   align-items: center;
+   font-weight: 500;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+}
+.circle4shown{
+    opacity: 1;
+    transition: all 1.5s ease;
+    right : -50px;
+    top: 200px;
+}
 .imgdivv{
     width: 80%;
     max-width: 80%;

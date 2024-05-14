@@ -3,8 +3,13 @@ import LeftdivPerson from '../components/secondpageComponents/LeftdivPerson'
 import useIntersection from '../CustomHooks/useIntersection'
 import FulluseIntersection from '../CustomHooks/Fulluseintersection';
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useInView } from 'react-intersection-observer';
 export default function Secondpage() {
-    const [text,istextshown] = useIntersection()
+    const [text,istextshown] = useInView({
+      triggerOnce: true,
+      threshold: 0.5
+    });
+
     const [data,isdatashown] = useIntersection()
   return (
     <>

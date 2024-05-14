@@ -7,6 +7,7 @@ import Casestudies from '../components/Casestudies';
 import Latestnews from '../components/Latestnews';
 import Last from '../components/Last';
 import OrangeCircle from '../components/OrangeCircle';
+import Fourthpage from './Fourthpage';
 export default function Homepage() {
 
     return (

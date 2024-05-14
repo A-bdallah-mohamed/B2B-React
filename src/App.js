@@ -3,6 +3,7 @@
 import Secondpage from './pages/Secondpage';
   import Homepage from './pages/Homepage';
 import Thirdpage from './pages/thirdpage';
+import Fourthpage from './pages/Fourthpage';
   function App() {
     return (
       <div className='maincontainer'>
@@ -10,6 +11,7 @@ import Thirdpage from './pages/thirdpage';
 <Homepage />
 <Secondpage />
 <Thirdpage />
+<Fourthpage />
 </div>
 </div>
 
