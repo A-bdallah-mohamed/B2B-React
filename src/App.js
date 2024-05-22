@@ -1,9 +1,10 @@
 
   import './App.css';
-import Secondpage from './pages/Secondpage';
-  import Homepage from './pages/Homepage';
-import Thirdpage from './pages/thirdpage';
-import Fourthpage from './pages/Fourthpage';
+import Secondpage from './pages/SecondSection';
+  import Homepage from './pages/MainSection';
+import Thirdpage from './pages/ThirdSection';
+import Fourthpage from './pages/FourthSection';
+import Fifthpage from './pages/fifthpage';
   function App() {
     return (
       <div className='maincontainer'>
@@ -12,6 +13,7 @@ import Fourthpage from './pages/Fourthpage';
 <Secondpage />
 <Thirdpage />
 <Fourthpage />
+<Fifthpage />
 </div>
 </div>
 
