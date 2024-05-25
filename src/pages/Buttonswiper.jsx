@@ -5,7 +5,7 @@ import image2 from '../assets/landtwo.jpg'
 import image3 from '../assets/landthree.jpg'
 import image4 from '../assets/landfour.jpg'
 import { ImEarth } from 'react-icons/im'
-
+import { FaLongArrowAltRight } from "react-icons/fa";
 export default function Buttonswiper() {
 const images = [
     image1,image2,image3,image4
@@ -19,14 +19,21 @@ const [secondimageposition,setsecondimageposition] = useState(0)
 const [thirdimageposition,setthirdimageposition] = useState(0)
 const [fourthimageposition,setfourthimageposition] = useState(0)
     const [isanimating,setisanimating] = useState(false)
-
+const [isdisabled,setisdisabled] = useState(false)
   
+
+
     const previmage = (current - 1 + images.length) % images.length
     const nextimage = (current + 1 ) % images.length
 const fourthimage = (current + 2) % images.length
     const next = () =>{
         setcurrent((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1))
         setisanimating(true)
+
+        setisdisabled(true)
+        setTimeout(() => {
+            setisdisabled(false)
+        }, 2000);
     console.log(previmage,current,nextimage,fourthimage,isanimating)
 
     }
@@ -41,17 +48,32 @@ const fourthimage = (current + 2) % images.length
 
     useEffect(()=> {
 if(current === 2){
-setsecondimageposition(-2 * 711 + 50)
+setsecondimageposition(-2 * 761)
 setTimeout(() => {
-    setsecondimageposition(2 * 711 + 50)
+    setsecondimageposition(2 * 761)
 }, 500);
 }
 if(current === 1){
-setfirstimageposition(-761 )
+setfirstimageposition(-761)
 setTimeout(() => {
-    setfirstimageposition(3*761)
+    setfirstimageposition(3*821)
 }, 500);
 }
+
+if(current === 3){
+    setthirdimageposition(-4*761)
+    setTimeout(() => {
+        setthirdimageposition(761)
+    }, 500);
+    }
+
+    
+if(current === 0){
+    setfourthimageposition(-4*761)
+    setTimeout(() => {
+        setfourthimageposition(761)
+    }, 500);
+    }
     },[current])
   return (
     <div className='buttonswipercontainer'>
@@ -62,10 +84,12 @@ setTimeout(() => {
 </div>
 
 <div className='buttonswiper'>
-<img src={images[0]} className='swiperimage' style={{
+<img src={images[0]} className={`${current === 3 ? 'imagemain' : 'swiperimage'} `} style={{
     transform : current === 1 ? `translateX(${firstimageposition}px)` 
-    : current === 2 ? `translateX(${2*761}px)`
-    : current === 3 ? `translateX(${761}px)` 
+    : current === 2 
+    ? `translateX(${2*861}px)`
+    : current === 3 
+    ? `translateX(${761}px)` 
     : ''
     , opacity: current === 1 ? '0' : '' 
 }}></img>
@@ -79,10 +103,23 @@ setTimeout(() => {
         ? `translateX(${1 * 711 + 50}px)`
         : '' , opacity : current === 2 ? '0' : ''
   }}></img>
-<img src={images[2]} className='swiperimage'></img>
+<img src={images[2]} className={`${current === 1 ? 'imagemain' : 'swiperimage'} `} style={{
+    transform: current === 1 ? `translateX(${-761}px)` 
+    : current === 2 ? `translateX(-${2 * 761}px)`
+    : current === 3 ? `translateX(${thirdimageposition}px)`
+    : '' , opacity : current === 3 ? '0' : ''
+}}></img>
+<img src={images[3]} className={`${current === 2 ? 'imagemain' : 'swiperimage'} `}   style={{
+    transform: current === 1 ? `translateX(${-761}px)` 
+    : current === 2 ? `translateX(-${2 * 761}px)`
+    : current === 0 ? `translateX(${fourthimageposition}px)`
+    : current === 3 ? `translateX(-${3*831}px)`
+    : ''
+     , opacity : current === 0 ? '0' : ''
+}}></img>
 </div>
-<button onClick={next}>next</button>
-<button className={`${isanimating ? 'animatebutton' : ''}`}>animate</button>
+<button onClick={next} disabled={isdisabled} className='nextbutton'>
+    <div>Next <br /> article <br /> <FaLongArrowAltRight /></div></button>
     </div>
   )
 }
