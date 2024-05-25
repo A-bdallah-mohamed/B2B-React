@@ -7,23 +7,23 @@ import image4 from '../assets/landscape4.jpg'
 import image5 from '../assets/landscape5.jpg'
 import { FaLongArrowAltRight } from "react-icons/fa";
 export default function Onhoverimage() {
-    const [showImageIndex, setShowImageIndex] = useState(null);
+    const [showimage, setshowimage] = useState(null);
 
-    const handleMouseEnter = (index) => {
-        setShowImageIndex(index);
+    const mouseenter = (index) => {
+        setshowimage(index);
     };
-    const handleMouseLeave = () => {
-        setShowImageIndex(null);
+    const mouseleave = () => {
+        setshowimage(null);
     };
     const Card = (a,b,i,index)=>{
         return(
-            <div className='containerscontainer' onMouseEnter={()=>handleMouseEnter(index)} onMouseLeave={handleMouseLeave}>
+            <div className='containerscontainer' onMouseEnter={()=>mouseenter(index)} onMouseLeave={mouseleave}>
             <div className='hoverdivcontainer'>
             <div className='realhoverdivfirsttext'>{a}
           </div>
           <div className='fakeone'>{a}</div>
         <div className='hoverdivsecondtext'>{b}</div>
-        <img src={i} style={{position:'absolute'}} className={`imagedivnotshowing ${showImageIndex == index ? 'imagedivshown' : ''}`} />
+        <img src={i} style={{position:'absolute'}} className={`imagedivnotshowing ${showimage == index ? 'imagedivshown' : ''}`} />
         </div>
         </div>
         )

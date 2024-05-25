@@ -6,6 +6,10 @@ import Thirdpage from './pages/ThirdSection';
 import Fourthpage from './pages/FourthSection';
 import Swiper from './pages/Swiper';
 import Onhoverimage from './pages/Onhoverimage';
+import Buttonswiper from './pages/Buttonswiper';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
   function App() {
     return (
       <div className='maincontainer'>
@@ -16,7 +20,9 @@ import Onhoverimage from './pages/Onhoverimage';
 <Fourthpage />
 <Swiper />
 <Onhoverimage />
+
 </div>
+<Buttonswiper />
 </div>
 
     );
