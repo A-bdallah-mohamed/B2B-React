@@ -18,7 +18,9 @@ const handlewheel = (e)=> {
 if (e.deltaY !== 0){
     scrolldiv.scrollLeft  += e.deltaY * 2;
     e.preventDefault()
+    console.log(e.deltaY,e.deltaX)
 }
+
 const scroll = scrolldiv.scrollLeft
 setscrollposition(scroll)
 }

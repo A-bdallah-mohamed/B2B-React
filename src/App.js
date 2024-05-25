@@ -4,7 +4,8 @@ import Secondpage from './pages/SecondSection';
   import Homepage from './pages/MainSection';
 import Thirdpage from './pages/ThirdSection';
 import Fourthpage from './pages/FourthSection';
-import Fifthpage from './pages/fifthpage';
+import Swiper from './pages/Swiper';
+import Onhoverimage from './pages/Onhoverimage';
   function App() {
     return (
       <div className='maincontainer'>
@@ -13,7 +14,8 @@ import Fifthpage from './pages/fifthpage';
 <Secondpage />
 <Thirdpage />
 <Fourthpage />
-<Fifthpage />
+<Swiper />
+<Onhoverimage />
 </div>
 </div>
 

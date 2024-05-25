@@ -6,7 +6,7 @@ body{
     background-image: linear-gradient(to bottom, #ede9e3, #d4b2a7);
 }
 .cont{
-height: 500vh;
+height: 800vh;
     max-width: 1360px;
     display: flex;
     flex-direction: column;
@@ -789,7 +789,7 @@ border:1px solid black;
     font-weight: 500;
 }             
 .swipercontainer{
-    width: 105w;
+    width: 98vw;
     scroll-padding: 30px;
     height: auto;
     max-width: 1380px;
@@ -798,7 +798,7 @@ overflow-y: auto;
 scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     height: 450px;
-    transform: translateX(4%);
+    transform: translateX(2%);
     scroll-snap-type: x mandatory;
 
 }
@@ -809,16 +809,15 @@ scroll-snap-type: x mandatory;
     width: auto;
     height: 450px;
     position: relative;
-    transform: translateX(15%);
     display: flex;
     flex-direction: column;
     scroll-snap-align: start;
   }
 .card{
-    width: 300px;
+    width: 250px;
     height: 250px;
     min-height: 50px;
-    min-width: 300px;
+    min-width: 250px;
     transition: all 1s ease;
 margin-left: 15px;
     display: flex;
@@ -870,4 +869,144 @@ font-weight: bold;
 }
 .softnavy{
     background-color: #a8a891;
+}
+.onhoverimagediv{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+
+}
+.imagedivnotshowing{
+  pointer-events: none;
+  max-width: 280px;
+  height: auto;
+  transition: max-width 1s ease , opacity 0.1s ease;
+  opacity: 0;
+  position: fixed;
+  border-radius: 15px;
+  overflow: hidden;
+  transform: translateX(350px);
+}
+.imagedivshown{
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+.fitsttextonhoverdiv{
+display: flex;
+gap: 170px;
+width: 750px;
+}
+.firsttextcontainer{
+    margin-top: 180px; 
+}
+.secondthirdtextcontainer{
+    display: flex;
+    gap: 60px;
+}
+.firstfirsttext{
+    font-size: 25px;
+}
+.firstsecondtext{
+    font-size: 15px;
+}
+.firstthirdtext{
+    font-weight: bold;
+position: relative;
+cursor: pointer;
+}
+.realtext{
+    position: absolute;
+    top: 0px;
+    opacity: 1;
+    transition: all 0.25s ease;
+}
+.relarrow{
+    position: absolute;
+    top: 23px;
+    opacity: 1;
+    left: 0;
+    transition: all 0.25s ease;
+}
+.faketext{
+    transform: translateY(70%);
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+.firstthirdtext:hover .faketext{
+    transform: translateY(0);
+    opacity: 1;
+    color: rgb(235, 110, 0);
+    transition: all 0.25s ease;
+}
+.fakearrow{
+    transform: translateX(-100%);
+opacity: 0;
+    transition: all 0.25s ease;
+}
+.firstthirdtext:hover .fakearrow{
+    transform: translateY(0);
+    opacity: 1;
+    color: rgb(235, 110, 0);
+    transition: all 0.25s ease;
+}
+.firstthirdtext:hover .relarrow{
+left: 10px;
+opacity: 0;
+transition: all 0.25s ease;
+}
+.firstthirdtext:hover .realtext{
+    top: -10px;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+.hoverdivcontainer{
+    width: 750px;
+    max-width: 750px;
+    display: flex;
+justify-content: space-between;
+padding: 35px 25px;
+align-items: center;
+position: relative;
+}
+.containerscontainer::before{
+    content: "";
+    display: block;
+    border-top: 1px solid rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+}
+.hoverdivcontainer:hover .realhoverdivfirsttext{
+    transform: translateY(-30%);
+opacity: 0;
+    transition: transform 0.25s ease,opacity 0.3s ease;
+}
+.realhoverdivfirsttext{
+    font-size: 39px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    transform: translateY(0);
+opacity: 1;
+}
+.hoverdivcontainer:hover .fakeone{
+    transform: translateY(0%);
+opacity: 1;
+    transition: all 0.25s ease;
+}
+.fakeone{
+    font-size: 39px;
+    font-weight: 500;
+    position: absolute;
+    transform: translateY(-30%);
+    color: rgb(235, 110, 0);
+    transition: all 0.25s ease;
+opacity: 0;
+}
+.cardscontainero{
+    margin-top: 100px;
+}
+.hoverdivsecondtext{
+    font-size: 12px;
 }
