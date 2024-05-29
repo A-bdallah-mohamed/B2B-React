@@ -20,7 +20,7 @@ const [thirdimageposition,setthirdimageposition] = useState(0)
 const [fourthimageposition,setfourthimageposition] = useState(0)
     const [isanimating,setisanimating] = useState(false)
 const [isdisabled,setisdisabled] = useState(false)
-  
+const [pannels, setPannels] = useState(["project one","project two","project three","project four"]);
 
 
     const previmage = (current - 1 + images.length) % images.length
@@ -33,7 +33,7 @@ const fourthimage = (current + 2) % images.length
         setisdisabled(true)
         setTimeout(() => {
             setisdisabled(false)
-        }, 2000);
+        }, 500);
     console.log(previmage,current,nextimage,fourthimage,isanimating)
 
     }
@@ -120,6 +120,15 @@ if(current === 0){
 </div>
 <button onClick={next} disabled={isdisabled} className='nextbutton'>
     <div>Next <br /> article <br /> <FaLongArrowAltRight /></div></button>
+    <div className='pannelscontainer'>
+    {pannels.map((panel, index) => (
+        <>
+        <div key={index} className={`panel ${current === index ? 'currentpanel' : ''}`}></div>
+        <div key={panel} className={`panelname ${current === index ? 'panlenameshown' : ''}`}>{panel}</div>
+        </>
+    ))}
+</div>
+
     </div>
   )
 }
