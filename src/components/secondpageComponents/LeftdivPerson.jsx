@@ -4,7 +4,7 @@ import useIntersection from '../../CustomHooks/useIntersection'
 import FulluseIntersection from '../../CustomHooks/Fulluseintersection'
 export default function LeftdivPerson() {
     const [leftdiv,isleftdivshown] = useIntersection()
-    const [img,isimgshown] = useIntersection()
+    const [img,isimgshown] = FulluseIntersection()
   return (
    
     <div className='leftpersondiv' ref={leftdiv}>
