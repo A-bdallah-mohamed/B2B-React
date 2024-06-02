@@ -11,7 +11,7 @@ window.scrollBy({
     const [graycolumn,graycolumninview]= useIntersection()
     const [maintext,ismaintextinview]= useIntersection()
   return (
-<div className={`graycolumn ${graycolumninview && 'grayc'}`} ref={graycolumn}>
+<div className={`graycolumn ${ismaintextinview && 'grayc'}`} ref={graycolumn}>
   <div className={`textingray ${ismaintextinview && 'isitz'}`} ref={maintext}>
   <div>YOUR BEST</div>
   <div>MARKETING & DATA</div>

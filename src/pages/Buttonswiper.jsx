@@ -33,7 +33,7 @@ const fourthimage = (current + 2) % images.length
         setisdisabled(true)
         setTimeout(() => {
             setisdisabled(false)
-        }, 500);
+        }, 1000);
     console.log(previmage,current,nextimage,fourthimage,isanimating)
 
     }
@@ -76,6 +76,7 @@ if(current === 0){
     }
     },[current])
   return (
+    <>
     <div className='buttonswipercontainer'>
 <div className='buttonswiperfirstetxt'>
     <div ref={textone} className={`firststatic ${textonesown && 'firstshown'}`}>OPEN NEW</div>
@@ -122,13 +123,17 @@ if(current === 0){
     <div>Next <br /> article <br /> <FaLongArrowAltRight /></div></button>
     <div className='pannelscontainer'>
     {pannels.map((panel, index) => (
-        <>
-        <div key={index} className={`panel ${current === index ? 'currentpanel' : ''}`}></div>
-        <div key={panel} className={`panelname ${current === index ? 'panlenameshown' : ''}`}>{panel}</div>
-        </>
+        <React.Fragment key={index}>
+        <div className={`panel ${current === index ? 'currentpanel' : ''}`}></div>
+        <div  className={`panelname ${current === index ? 'panlenameshown' : ''}`}>{panel}</div>
+        </React.Fragment>
     ))}
 </div>
 
     </div>
+
+
+    </>
+    
   )
 }

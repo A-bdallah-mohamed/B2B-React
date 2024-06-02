@@ -5,6 +5,7 @@ import image2 from '../assets/landscape2.jpg'
 import image3 from '../assets/landscape3.jpg'
 import image4 from '../assets/landscape4.jpg'
 import image5 from '../assets/landscape5.jpg'
+import Buttonswiperphone from './buttonswiperphone'
 import { FaLongArrowAltRight } from "react-icons/fa";
 export default function Onhoverimage() {
     const [showimage, setshowimage] = useState(null);
@@ -59,6 +60,12 @@ budgets, and creatives.
         {Card("Olliver studio","Creative & optimization",image3,3)}
         {Card("Greezly Brand Store","Full marketing solution",image4,4)}
         </div>
+        
+
+        
+<Buttonswiperphone />
+
+
         </div>
 
 
